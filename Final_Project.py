@@ -58,6 +58,7 @@ cha = alt.Chart(df_new).mark_circle().encode(
 )
 
 st.altair_chart(cha, use_container_width=True)
+st.write('The X and Y axis represent the ranking, the smaller figure means the higher ranking ')
 # Keras
 
 
