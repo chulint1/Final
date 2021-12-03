@@ -9,7 +9,7 @@ import altair as alt
 
 
 st.title('The ranking of Universities')
-
+st.write('In this section, we are exploring the relationship between all the aspects of Universities')
 # Read Data
 
 df = pd.read_csv("cwurData.csv")
@@ -104,6 +104,8 @@ from plotly.subplots import make_subplots
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 init_notebook_mode(connected=True)
 
+st.write('In this section, we are looking at how many Universities are possessed by country ')
+
 all_countries = sorted(set(list(df_new["country"])))
 
 # input: a country. output: how many universities
@@ -136,10 +138,12 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.write('Referencing：https://towardsdatascience.com/visualizing-the-coronavirus-pandemic-with-choropleth-maps-7f30fccaecf5')
 
+st.write('In this section, we are searching for all the ranking of a certain University')
 U_name = st.text_input('Enter the University you are looking for', 'Harvard')
 df_u = df3[df3["institution"].map(lambda g_list: U_name in g_list)]
 st.write('World Ranking: ', df_u)
 
+st.write('In this section, we are looking for Universities in a certain country')
 C_name = st.text_input('Enter the Country you are looking for', 'USA')
 df_c = df3[df3["country"].map(lambda g_list: C_name in g_list)]
 st.write('World Ranking: ', df_c)
