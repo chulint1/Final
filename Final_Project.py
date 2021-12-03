@@ -9,6 +9,7 @@ import altair as alt
 
 
 st.title('The ranking of Universities')
+st.markdown("[Here] (https://github.com/chulint1/Final) is a link to Chulin Tang's Github")
 st.write('In this section, we are exploring the relationship between all the aspects of Universities')
 # Read Data
 
@@ -183,4 +184,5 @@ prediction = int(model.predict(pd.DataFrame([[quality_of_education,
 st.write(f'Your World Ranking is {prediction}')
 ## Link to the dataset :  https://www.kaggle.com/mylesoneill/world-university-rankings
 st.write('Link to the dataset :  https://www.kaggle.com/mylesoneill/world-university-rankings')
+
 
